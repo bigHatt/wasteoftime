@@ -50,8 +50,6 @@
     "gitlens.blame.separateLines": false,
     "gitlens.defaultDateFormat": "DD.MM.YY hh:mm",
     "gitlens.codeLens.recentChange.enabled": false,
-    "gitlens.codeLens.authors.enabled": false,
-    "gitlens.codeLens.enabled": false,
     "gitlens.views.fileHistory.enabled": true,
     "gitlens.views.compare.files.layout": "tree",
     "gitlens.keymap": "chorded",

@@ -1,0 +1,27 @@
+<VirtualHost webscada.local:80>
+ServerName webscada.local
+ServerAlias www.webscada.local
+ServerAdmin admin@example.com
+DocumentRoot /var/www/webscada.local/public_html
+ErrorLog /var/www/webscada.local/runtime/logs/webscada.local-error_log
+CustomLog /var/www/webscada.local/runtime/logs/webscada.local-access_log common
+Alias "/api" "/var/www/webscada.local/public_api"
+<Directory /var/www/webscada.local/public_api>
+AllowOverride All
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php
+DirectoryIndex index.php
+Require all granted
+</Directory>
+<Directory /var/www/webscada.local/public_html>
+AllowOverride All
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php
+DirectoryIndex index.php
+Require all granted
+</Directory>
+</VirtualHost>

@@ -10,12 +10,15 @@ $config = [
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
+        '@public' => '/public_html'
     ],
     'layout' => 'hobies',
+    'defaultRoute' => 'main/index',
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'dJv2Ykf19VN0xPGtVyn7EWF33430zAzn',
+            'baseUrl'=> '',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -49,6 +52,11 @@ $config = [
             'showScriptName' => false,
             'rules' => [
             ],
+        ],
+        'authManager' => [
+            'class' => yii\rbac\DbManager::class,
+            'cache' => 'cache',
+            'cacheKey' => 'rbac',
         ],
     ],
     'params' => $params,

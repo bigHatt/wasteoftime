@@ -68,8 +68,6 @@
     "javascript.updateImportsOnFileMove.enabled": "never",
     "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
     "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
-    "phpcs.standard": ".php_cs",
-    "phpcs.executablePath": "/var/www/wasteoftime.local/vendor/bin/phpcs",
     "standard.enable": false,
     "timeline.excludeSources": [
     "git-history"
@@ -81,4 +79,5 @@
     ],
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 500,
+    "phpcs.standard": "PSR2"
     }

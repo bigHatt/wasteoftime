@@ -1,5 +1,0 @@
-<?php
-?>
-<div>
-<?= phpinfo() ?>
-</div>
